@@ -1,3 +1,3 @@
 namespace RvcApp.Models;
 
-public record RvcPath(Coordinate StartCoordinate, List<Command> Commands);
+public record RvcPath(Coordinate Start, List<Command> Commands);
