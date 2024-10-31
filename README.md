@@ -8,11 +8,10 @@ The web application that simulates a robot moving.
    - DB_NAME=rvc
    - DB_USER=postgres
    - DB_PASSWORD=postgres
-2. Run docker-compose.yml: 
+2. Run docker-compose.yml. Two docker containers should be started (rvc_webapp and postgres_db).  
 ```bash
 docker-compose up --build
-```
-Two docker containers should be started (rvc_webapp and postgres_db).
+```  
 3. Send a http request to run a robot:
 ```bash
    curl -X POST http://localhost:5000/tibber-developer-test/enter-path -H "Content-Type: application/json" -d '{"start": {"x": 10, "y": 22}, "commands": [{"direction": "east", "steps": 2}]}' 
